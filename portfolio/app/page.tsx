@@ -19,6 +19,8 @@ export default function Home() {
         <br></br>
         <p></p>
       </div>
+
+      {/* Skills */}
       <div className="row-span-8 border-2 flex flex-col gap-5">
         <div>
           <div className="text-purple-300">FRONTEND</div>
@@ -37,20 +39,33 @@ export default function Home() {
           Unity, Visual Studio Code, Adobe Illustrator, Adobe Photoshop, Figma, GitHub
         </div>
       </div>
+
+      {/* Experience */}
       <div className="row-span-4 border-2">
         Experience
       </div>
+
+      {/* Web Development */}
       <div className="col-span-2 row-span-2">
         <div className="border-2 w-57 text-center rounded-t-xl">
           Web Development Projects
         </div>
         <WebDev/>
       </div>
+
+      {/* Game Development */}
       <div className="col-span-2 row-span-2">
         <div className="border-2 w-60 text-center rounded-t-xl">
           Game Development Projects
         </div>
         <GameDev/>
+      </div>
+
+      {/* GitHub */}
+      <div className="col-span-3">
+        <a href="https://github.com/Sparsh-I" target="_blank">
+          <img src="https://ghchart.rshah.org/7955FF/Sparsh-I" alt="Sparsh-I's Github chart" />
+        </a>
       </div>
     </div>
   );
