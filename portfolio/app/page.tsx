@@ -10,8 +10,8 @@ export default function Home() {
     //   </h1>
     // </div>
 
-    <div className="grid grid-cols-4 gap-7 py-30 px-50">
-      <div className="col-span-3 row-span-2 border-5 border-gray-600 p-4 rounded-2xl">
+    <div className="grid grid-cols-4 gap-5 py-5 px-20">
+      <div className="col-span-3 row-span-2 border-3 border-gray-600 p-4 rounded-2xl">
         <p>Hello, I'm <strong>Sparsh Inanda</strong>, a Computer Science and Statistics major in my final year at the University of British Columbia.</p>
         <br></br>
         <p>I've got a passion for web development and game developmennt and most recently worked as a full-stack developer at <a className="underline" href="https://icbc.com">ICBC</a>.</p>

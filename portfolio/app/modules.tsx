@@ -7,10 +7,10 @@ import { DiIllustrator, DiPhotoshop } from "react-icons/di";
 export function Experience() {
     return (
         <div>
-            <div className="border-5 border-gray-600 bg-gray-600 text-center rounded-t-xl w-30">
+            <div className="border-3 border-gray-600 bg-gray-600 text-center rounded-t-xl w-30">
                 Experience
             </div>
-            <div className="border-5 border-gray-600 p-4 rounded-tl-none rounded-2xl text-center">
+            <div className="border-3 border-gray-600 p-4 rounded-tl-none rounded-2xl text-center">
                 <p>Sep '25 - Aug '26</p>
                 <p><strong>Full-stack Developer</strong></p>
                 <p><em>Insurance Corporation of British Columbia</em></p>
@@ -68,10 +68,10 @@ const software = [
 export function Technologies() {
     return (
         <div>
-            <div className="border-5 border-gray-600 bg-gray-600 text-center rounded-t-xl w-35">
+            <div className="border-3 border-gray-600 bg-gray-600 text-center rounded-t-xl w-35">
                 Technologies
             </div>
-            <div className="border-5 flex flex-col gap-5 border-gray-600 p-4 rounded-tl-none rounded-2xl">
+            <div className="border-3 flex flex-col gap-5 border-gray-600 p-4 rounded-tl-none rounded-2xl">
                 <div>
                     <div className="text-purple-300 pb-4">FRONTEND</div>
                     <div className="flex flex-row flex-wrap justify-center gap-2 text-3xl">
@@ -112,7 +112,7 @@ export function Technologies() {
 export function WebDev() {
     return (
         <div>
-            <div className="border-5 border-gray-600 bg-gray-600 w-57 text-center rounded-t-xl">
+            <div className="border-3 border-gray-600 bg-gray-600 w-57 text-center rounded-t-xl">
                 Web Development Projects
             </div>
             <div className="relative group overflow-hidden rounded-tl-none rounded-xl shadow-lg cursor-pointer bg-gray-100">
@@ -135,11 +135,11 @@ export function WebDev() {
 export function GameDev() {
     return (
         <div>
-          <div className="border-5 border-gray-600 bg-gray-600 w-60 text-center rounded-t-xl">
+          <div className="border-3 border-gray-600 bg-gray-600 w-60 text-center rounded-t-xl">
             Game Development Projects
           </div>
-          <div className="grid grid-cols-2 border-5 border-gray-600 rounded-tl-none rounded-2xl text-center flex place-items-center gap-5 p-5">
-              <div className="relative group overflow-hidden rounded-xl shadow-lg cursor-pointer h-35 flex items-center pb-5">
+          <div className="grid grid-cols-2 border-3 border-gray-600 rounded-tl-none rounded-2xl text-center flex place-items-center gap-5 p-5">
+              <div className="relative group overflow-hidden rounded-xl shadow-lg cursor-pointer h-35 flex items-end">
               <a href="https://permafrosted.itch.io/mt-stringmore/" target="_blank">
                 <img 
                   src="https://img.itch.zone/aW1nLzI0ODYxMDA1LnBuZw==/315x250%23c/Wu0ULm.png"
@@ -196,10 +196,10 @@ export function GameDev() {
 export function Contact() {
     return (
         <div>
-            <div className="border-5 border-gray-600 bg-gray-600 text-center rounded-t-xl w-30">
+            <div className="border-3 border-gray-600 bg-gray-600 text-center rounded-t-xl w-30">
                 Contact
             </div>
-            <div className="border-5 border-gray-600 p-4 rounded-tl-none rounded-2xl text-center">
+            <div className="border-3 border-gray-600 p-4 rounded-tl-none rounded-2xl text-center">
                 <p>LinkedIn</p>
                 <p>Email</p>
                 <p></p>
@@ -211,7 +211,7 @@ export function Contact() {
 export function GitHub() {
     return (
         <div className="flex flex-row">
-            <div className="bg-gray-600 border-5 border-gray-600 text-center rounded-r-xl [writing-mode:vertical-rl] rotate-180">
+            <div className="bg-gray-600 border-3 border-gray-600 text-center rounded-r-xl [writing-mode:vertical-rl] rotate-180">
                 GitHub
             </div>
             <div className="relative group overflow-hidden rounded-l-none rounded-r-xl shadow-lg cursor-pointer bg-white p-3 flex justify-center w-full">
