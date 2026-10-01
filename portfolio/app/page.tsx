@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { GameDev } from "./modules/GameDev";
 import { WebDev } from "./modules/WebDev";
+import { GitHub } from "./modules/GitHub";
 
 export default function Home() {
   return (
@@ -47,25 +48,17 @@ export default function Home() {
 
       {/* Web Development */}
       <div className="col-span-2 row-span-2">
-        <div className="border-2 w-57 text-center rounded-t-xl">
-          Web Development Projects
-        </div>
         <WebDev/>
       </div>
 
       {/* Game Development */}
       <div className="col-span-2 row-span-2">
-        <div className="border-2 w-60 text-center rounded-t-xl">
-          Game Development Projects
-        </div>
         <GameDev/>
       </div>
 
       {/* GitHub */}
       <div className="col-span-3">
-        <a href="https://github.com/Sparsh-I" target="_blank">
-          <img src="https://ghchart.rshah.org/7955FF/Sparsh-I" alt="Sparsh-I's Github chart" />
-        </a>
+        <GitHub/>
       </div>
     </div>
   );

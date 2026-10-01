@@ -1,6 +1,9 @@
 export function WebDev() {
     return (
         <div>
+            <div className="border-2 w-57 text-center rounded-t-xl">
+                Web Development Projects
+            </div>
             <div className="relative group overflow-hidden rounded-tl-none rounded-xl shadow-lg cursor-pointer bg-gray-100">
             <a href="https://tripsitter-psi.vercel.app/" target="_blank" className="flex flex-row items-center justify-center">
                 <div className="flex flex-row items-center justify-center w-60 h-20">
