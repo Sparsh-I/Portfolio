@@ -200,8 +200,8 @@ export function Contact() {
                 Contact
             </div>
             <div className="border-3 border-gray-600 p-4 rounded-tl-none rounded-2xl text-center">
-                <p>LinkedIn</p>
-                <p>Email</p>
+                <a href="https://linkedin.com/in/sparsh-inanda/" target="_blank"><p>LinkedIn</p></a>
+                <a href="mailto:sparsh.poonacha@gmail.com"><p>Email</p></a>
                 <p></p>
             </div>
         </div>
