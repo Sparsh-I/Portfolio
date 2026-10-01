@@ -55,15 +55,18 @@ const backend = [
 
 const tools = [
     { Icon: SiIcons.SiGit, name: "Git", color: "#F1502F" },
+    { Icon: SiIcons.SiNumpy, name: "NumPy", color: "#4DABCF" },
+    { Icon: SiIcons.SiPandas, name: "Pandas", color: "#FFF" },
+    { Icon: SiIcons.SiScikitlearn, name: "scikit-learn", color: "#F7931E" },
 ];
 
 const software = [
-    { Icon: SiIcons.SiUnity, name: "Unity", color: "#FFFFFF" },
+    { Icon: SiIcons.SiUnity, name: "Unity", color: "#FFF" },
     { Icon: VscVscode, name: "VS Code", color: "#007ACC" },
     { Icon: DiIllustrator, name: "Illustrator", color: "#FF9A00" },
     { Icon: DiPhotoshop, name: "Photoshop", color: "#31A8FF" },
     { Icon: SiIcons.SiFigma, name: "Python", color: "#F24E1E" },
-    { Icon: SiIcons.SiGithub, name: "GitHub", color: "#FFFFFF" },
+    { Icon: SiIcons.SiGithub, name: "GitHub", color: "#FFF" },
 ];
 
 export function Technologies() {
@@ -72,7 +75,7 @@ export function Technologies() {
             <div className="border-3 border-gray-600 bg-gray-600 text-center rounded-t-xl w-35">
                 Technologies
             </div>
-            <div className="border-3 flex flex-col gap-5 border-gray-600 p-4 rounded-tl-none rounded-2xl">
+            <div className="border-3 flex flex-col justify-around gap-5 border-gray-600 p-4 rounded-tl-none rounded-2xl h-120">
                 <div>
                     <div className="text-purple-300 pb-4">FRONTEND</div>
                     <div className="flex flex-row flex-wrap justify-center gap-2 text-3xl">
