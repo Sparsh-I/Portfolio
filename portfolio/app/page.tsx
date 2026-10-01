@@ -1,7 +1,5 @@
 import Image from "next/image";
-import { GameDev } from "./modules/GameDev";
-import { WebDev } from "./modules/WebDev";
-import { GitHub } from "./modules/GitHub";
+import * as Modules from "./modules";
 
 export default function Home() {
   return (
@@ -12,53 +10,35 @@ export default function Home() {
     //   </h1>
     // </div>
 
-    <div className="grid grid-cols-4 gap-10 py-30 px-40">
-      <div className="col-span-3 row-span-2 border-2">
+    <div className="grid grid-cols-4 gap-7 py-30 px-50">
+      <div className="col-span-3 row-span-2 border-5 border-gray-600 p-4 rounded-2xl">
         <p>Hello, I'm <strong>Sparsh Inanda</strong>, a Computer Science and Statistics major in my final year at the University of British Columbia.</p>
         <br></br>
         <p>I've got a passion for web development and game developmennt and most recently worked as a full-stack developer at <a className="underline" href="https://icbc.com">ICBC</a>.</p>
-        <br></br>
-        <p></p>
       </div>
 
-      {/* Skills */}
-      <div className="row-span-8 border-2 flex flex-col gap-5">
-        <div>
-          <div className="text-purple-300">FRONTEND</div>
-          ReactJS, Vite, HTML, CSS, Next.js, Tailwind
-        </div>
-        <div>
-          <div className="text-purple-300">BACKEND</div>
-          TypeScript, Node.js, C#, Java, Python, JavaScript, PostgreSQL
-        </div>
-        <div>
-          <div className="text-purple-300">TOOLS</div>
-          Git, 
-        </div>
-        <div>
-          <div className="text-purple-300">SOFTWARE</div>
-          Unity, Visual Studio Code, Adobe Illustrator, Adobe Photoshop, Figma, GitHub
-        </div>
+      <div className="row-span-4">
+        <Modules.Technologies/>
       </div>
 
-      {/* Experience */}
-      <div className="row-span-4 border-2">
-        Experience
+      <div className="row-span-2">
+        <Modules.Experience/>
       </div>
 
-      {/* Web Development */}
+      <div className="col-span-2">
+        <Modules.WebDev/>
+      </div>
+
       <div className="col-span-2 row-span-2">
-        <WebDev/>
+        <Modules.GameDev/>
       </div>
 
-      {/* Game Development */}
-      <div className="col-span-2 row-span-2">
-        <GameDev/>
+      <div>
+        <Modules.Contact/>
       </div>
 
-      {/* GitHub */}
       <div className="col-span-3">
-        <GitHub/>
+        <Modules.GitHub/>
       </div>
     </div>
   );
