@@ -33,12 +33,20 @@ export default function Home() {
         <Modules.GameDev/>
       </div>
 
-      <div>
+      <div className="col-span-1">
+        <Modules.Resume/>
+      </div>
+
+      <div className="col-span-1">
         <Modules.Contact/>
       </div>
 
       <div className="col-span-1 lg:col-span-3">
         <Modules.GitHub/>
+      </div>
+      
+      <div className="col-span-1">
+        <Modules.Time/>
       </div>
     </div>
   );
