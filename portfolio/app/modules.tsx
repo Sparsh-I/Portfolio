@@ -112,7 +112,7 @@ export function Technologies() {
 export function WebDev() {
     return (
         <div>
-            <div className="border-3 border-gray-600 bg-gray-600 w-57 text-center rounded-t-xl">
+            <div className="border-3 border-gray-600 bg-gray-600 w-60 text-center rounded-t-xl">
                 Web Development Projects
             </div>
             <div className="relative group overflow-hidden rounded-tl-none rounded-xl shadow-lg cursor-pointer bg-gray-100">
@@ -138,7 +138,7 @@ export function GameDev() {
           <div className="border-3 border-gray-600 bg-gray-600 w-60 text-center rounded-t-xl">
             Game Development Projects
           </div>
-          <div className="grid grid-cols-2 border-3 border-gray-600 rounded-tl-none rounded-2xl text-center flex place-items-center gap-5 p-5">
+          <div className="grid grid-cols-1 lg:grid-cols-2 border-3 border-gray-600 rounded-b-xl lg:rounded-tl-none lg:rounded-xl text-center flex place-items-center gap-5 p-5">
               <div className="relative group overflow-hidden rounded-xl shadow-lg cursor-pointer h-35 flex items-end">
               <a href="https://permafrosted.itch.io/mt-stringmore/" target="_blank">
                 <img 
