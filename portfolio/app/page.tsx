@@ -4,119 +4,122 @@ import { NavBar } from "./NavBar";
 import * as SiIcons from "react-icons/si";
 
 export default function Home() {
-  const tripSitterTechnologies = [
-    "TypeScript",
-    "Vite",
-    "React",
-    "HTML/CSS",
-    "PostgreSQL",
-    "Figma"
-  ]
-  
-  const mtStringmoreTechnologies = [
-    "Unity2D",
-    "C#",
-    "Adobe Illustrator",
-    "Notion",
-  ]
-
-type Project = {
-  title: string;
-  description: string;
-  technologies: string[];
-  image: string;
-  imageAlt: string;
-  liveUrl: string;
-  playLabel: string;
-  githubUrl?: string;
-  colour?: string;
-};
-
-const featuredProjects: Project[] = [
-  {
-    title: "TripSitter",
-    description: "TripSitter is an in-development web application that allows users to log, manage, and share their travel itineraries with other members of the trip.",
-    technologies: ["TypeScript", "Vite", "React", "HTML/CSS", "PostgreSQL", "Figma"],
-    image: "/TripSitterWindow.png",
-    imageAlt: "TripSitter",
-    liveUrl: "https://tripsitter-psi.vercel.app/",
-    playLabel: "Visit TripSitter",
-    githubUrl: "https://github.com/Sparsh-I/tripsitter",
-    colour: "blue"
-  },
-  {
-    title: "Mt Stringmore",
-    description: "Mt Stringmore is a 2D autorunning platformer developed by Team 8 for the UBC Game Development Club.",
-    technologies: ["Unity2D", "C#", "Adobe Illustrator", "Notion"],
-    image: "/MtStringmoreScreen.png",
-    imageAlt: "Mt Stringmore",
-    liveUrl: "https://permafrosted.itch.io/mt-stringmore/",
-    playLabel: "Play Mt Stringmore",
-    githubUrl: "https://github.com/AdenC123/MtStringmore",
-    colour: "lime"
+  function ExperienceConnector({ future = false }: { future?: boolean }) {
+    return future ? (
+      <div className="flex items-center p-10">
+        <div className="w-3 h-3 rounded-full bg-purple-300" />
+        <div className="w-3 h-3 rounded-full bg-purple-300 mx-2" />
+        <div className="w-3 h-3 rounded-full bg-purple-300" />
+      </div>
+    ) : (
+      <div className="flex items-center p-7">
+        <div className="w-3 h-3 rounded-full bg-purple-300 px-6" />
+      </div>
+    );
   }
-];
 
-const additionalProjects: Project[] = [
-  {
-    title: "Glade",
-    description: "A rule-changing, 3D puzzle game developed for Major Jam 7: Wild.",
-    technologies: ["Unity3D", "C#"],
-    image: "https://img.itch.zone/aW1nLzIxNTQwMjk5LnBuZw==/315x250%23c/tZlo0c.png",
-    imageAlt: "Glade",
-    liveUrl: "https://sparsh-i.itch.io/glade/",
-    playLabel: "Play Glade",
-    githubUrl: "https://github.com/Sparsh-I/major-jam-7-wild",
-    colour: "emerald",
-  },
-  {
-    title: "Chirrup",
-    description: "A birds themed rhythm game developed for Mini Jam 184: Birds.",
-    technologies: ["Unity2D", "C#", "LibreSprite"],
-    image: "https://img.itch.zone/aW1nLzIxMTUxNjMxLnBuZw==/315x250%23c/1XSmUV.png",
-    imageAlt: "Chirrup",
-    liveUrl: "https://sparsh-i.itch.io/chirrup/",
-    playLabel: "Play Chirrup",
-    githubUrl: "https://github.com/Sparsh-I/mini-jam-184-birds",
-    colour: "lime"
-  },
-  {
-    title: "View All My Games",
-    description: "Check out all my games on itch.io!",
-    technologies: [],
-    image: "https://cdn-icons-png.flaticon.com/512/3388/3388785.png",
-    imageAlt: "View All Games",
-    liveUrl: "https://sparsh-i.itch.io/",
-    playLabel: "View All Games",
-  },
-];
+  type Project = {
+    title: string;
+    description: string;
+    technologies: string[];
+    image: string;
+    imageAlt: string;
+    liveUrl: string;
+    playLabel: string;
+    githubUrl?: string;
+    colour?: string;
+  };
+
+  const featuredProjects: Project[] = [
+    {
+      title: "TripSitter",
+      description: "TripSitter is an in-development web application that allows users to log, manage, and share their travel itineraries with other members of the trip.",
+      technologies: ["TypeScript", "Vite", "React", "HTML/CSS", "PostgreSQL", "Figma"],
+      image: "/TripSitterWindow.png",
+      imageAlt: "TripSitter",
+      liveUrl: "https://tripsitter-psi.vercel.app/",
+      playLabel: "Visit TripSitter",
+      githubUrl: "https://github.com/Sparsh-I/tripsitter",
+      colour: "blue"
+    },
+    {
+      title: "Mt Stringmore",
+      description: "Mt Stringmore is a 2D autorunning platformer developed by Team 8 for the UBC Game Development Club.",
+      technologies: ["Unity2D", "C#", "Adobe Illustrator", "Notion"],
+      image: "/MtStringmoreScreen.png",
+      imageAlt: "Mt Stringmore",
+      liveUrl: "https://permafrosted.itch.io/mt-stringmore/",
+      playLabel: "Play Mt Stringmore",
+      githubUrl: "https://github.com/AdenC123/MtStringmore",
+      colour: "lime"
+    }
+  ];
+
+  const additionalProjects: Project[] = [
+    {
+      title: "Glade",
+      description: "A rule-changing, 3D puzzle game developed for Major Jam 7: Wild.",
+      technologies: ["Unity3D", "C#"],
+      image: "https://img.itch.zone/aW1nLzIxNTQwMjk5LnBuZw==/315x250%23c/tZlo0c.png",
+      imageAlt: "Glade",
+      liveUrl: "https://sparsh-i.itch.io/glade/",
+      playLabel: "Play Glade",
+      githubUrl: "https://github.com/Sparsh-I/major-jam-7-wild",
+      colour: "emerald",
+    },
+    {
+      title: "Chirrup",
+      description: "A birds themed rhythm game developed for Mini Jam 184: Birds.",
+      technologies: ["Unity2D", "C#", "LibreSprite"],
+      image: "https://img.itch.zone/aW1nLzIxMTUxNjMxLnBuZw==/315x250%23c/1XSmUV.png",
+      imageAlt: "Chirrup",
+      liveUrl: "https://sparsh-i.itch.io/chirrup/",
+      playLabel: "Play Chirrup",
+      githubUrl: "https://github.com/Sparsh-I/mini-jam-184-birds",
+      colour: "lime"
+    },
+    {
+      title: "View All My Games",
+      description: "Check out all my games on itch.io!",
+      technologies: [],
+      image: "https://cdn-icons-png.flaticon.com/512/3388/3388785.png",
+      imageAlt: "View All Games",
+      liveUrl: "https://sparsh-i.itch.io/",
+      playLabel: "View All Games",
+    },
+  ];
+
   return (
     <div>
       <NavBar/>
       <div id="home"></div>
-      <div className="h-dvh w-full text-center text-gray-500 font-semibold text-2xl lg:text-6xl flex flex-col gap-20 py-50 px-50 leading-relaxed align-center bg-[url('/background.jpg')] bg-cover bg-center">
-        <p>Hello, I'm <strong className="text-purple-300"> Sparsh Inanda</strong>, a full-stack developer that also builds games.</p>
-        <div className="flex justify-center gap-20 py-10 text-lg lg:text-xl">
+      <div className="h-dvh w-full text-center text-gray-600 font-semibold text-2xl lg:text-6xl flex flex-col gap-20 py-50 px-[5%] leading-relaxed align-center bg-[url('/background.JPG')] bg-cover bg-center">
+        <div className="gap-10">
+          <p>Hello, I'm <strong className="text-violet-400"> Sparsh Inanda</strong>!</p>
+          <p className="text-lg lg:text-2xl">Full-stack developer that also builds games.</p>
+        </div>
+        <div className="flex justify-center gap-[5%] py-10 text-lg lg:text-xl">
           <a className="bg-white text-[#0077B5] font-bold py-2 px-4 rounded-xl hover:bg-[#0077B5] hover:text-white hover:cursor-pointer"
              href="https://www.linkedin.com/in/sparsh-inanda/" target="_blank" rel="noopener noreferrer">
             Visit My LinkedIn
           </a>
-          <a className="bg-purple-300 text-black py-2 px-4 rounded-xl hover:bg-purple-400 hover:cursor-pointer"
+          <a className="bg-violet-300 text-black py-2 px-4 rounded-xl hover:bg-violet-400 hover:cursor-pointer"
              href="/Resume.pdf" target="_blank" rel="noopener noreferrer">
             View My Resume
           </a>
         </div>
       </div>
 
-      <div>
-        <div className="text-4xl font-bold text-center py-10" id="about">
+      {/* About Me */}
+      <div id="about">
+        <div className="text-4xl font-bold text-center py-10">
           About Me
         </div>
         <div className="flex flex-col lg:flex-row justify-around items-center align-center px-5 lg:px-20">
           <div>
             <img src="/SparshInanda.png" alt="Sparsh Inanda" className="w-64 h-64 rounded-full object-cover"/>
           </div>
-          <div className="w-200 py-5">
+          <div className="w-full lg:w-200 py-5 px-5">
             <p className="text-xl py-5">
               I'm a Computer Science and Statistics major in my final year at the University of British Columbia. 
               I have a passion for web development and game development, and most recently worked as a full-stack developer at <a className="underline" href="https://icbc.com">ICBC</a>.
@@ -139,16 +142,48 @@ const additionalProjects: Project[] = [
               </a>
           </div>
         </div>
+
+        <div className="flex flex-col justify-center items-center align-center px-5 lg:px-20 w-full pb-20">
+          <div className="text-3xl font-bold text-center py-10">
+            Experience
+          </div>
+          <div className="border-3 border-gray-600 p-4 rounded-2xl text-center flex flex-row justify-center items-center">
+            <div>
+              <p>May '25 - Aug '25</p>
+              <p><strong>Programming Intern</strong></p>
+              <p><em>Yatabase</em></p>
+            </div>
+            <ExperienceConnector />
+            <div>
+              <p>Sep '25 - Aug '26</p>
+              <p><strong>Full-stack Developer</strong></p>
+              <p><em>Insurance Corporation of British Columbia</em></p>
+            </div>
+            <ExperienceConnector/>
+            <div>
+              <p>Sep '22 - May '27</p>
+              <p><strong>Computer Science & Statistics Major</strong></p>
+              <p><em>University of British Columbia</em></p>
+            </div>
+            <ExperienceConnector future/>
+            <div>
+              <p>May '27 - Future</p>
+              <p><strong>What's Next?</strong></p>
+              <p><em>Where to go from here?</em></p>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div>
-        <div className="text-4xl font-bold text-center py-10" id="projects">
+      {/* Featured Projects */}
+      <div id="projects">
+        <div className="text-4xl font-bold text-center py-10">
           Featured Projects
         </div>
 
-         <div className="flex flex-col justify-between items-center align-center gap-10 px-5 lg:px-20">
+         <div className="flex flex-col justify-between items-center align-center gap-10 px-5 lg:px-20 w-full">
           {featuredProjects.map((project) => (
-            <div key={project.title} className="flex flex-row-reverse items-center align-center gap-5 px-5 lg:px-20">
+            <div key={project.title} className="flex flex-col lg:flex-row-reverse items-center align-center gap-5 px-5 lg:px-5">
               <div className="relative group overflow-hiddenshadow-lg cursor-pointer bg-white flex justify-center rounded-2xl">
                 <a href={project.liveUrl} target="_blank">
                   <img src={project.image} alt={project.title} className="rounded-2xl"/>
@@ -195,6 +230,7 @@ const additionalProjects: Project[] = [
 
       </div>
 
+      {/* Additional Projects */}
       <div>
         <div className="text-4xl font-bold text-center py-10" id="projects">
           Additional Projects
