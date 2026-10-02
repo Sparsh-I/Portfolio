@@ -45,6 +45,31 @@ export default function Home() {
             </p>
           </div>
         </div>
+
+        <div className="text-2xl cursor-pointer underline text-center py-5">
+          <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer">
+            View My Resume
+          </a>
+        </div>
+
+        <div className="flex justify-center py-10">
+          <div className="relative group overflow-hiddenshadow-lg cursor-pointer bg-white p-3 flex justify-center w-180 rounded-2xl">
+              <a href="https://github.com/Sparsh-I" target="_blank">
+                <img src="https://ghchart.rshah.org/7955FF/Sparsh-I" alt="Sparsh-I's Github chart" />
+                <div className="absolute inset-0 bg-gray-900/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+                  <p className="text-white text-lg font-bold translate-y-5 group-hover:translate-y-0 transition-transform duration-300">
+                  Visit my repositories
+                  </p>
+                </div>
+              </a>
+          </div>
+        </div>
+
+        <div className="text-2xl cursor-pointer underline text-center py-5">
+          <a href="https://www.linkedin.com/in/sparsh-inanda/" target="_blank" rel="noopener noreferrer">
+            Visit My LinkedIn
+          </a>
+        </div>
       </div>
 
       <div>
