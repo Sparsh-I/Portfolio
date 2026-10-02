@@ -2,6 +2,7 @@ import Image from "next/image";
 import * as Modules from "./grid/modules";
 import { NavBar } from "./NavBar";
 import * as SiIcons from "react-icons/si";
+import { Footer } from "./Footer";
 
 export default function Home() {
   function ExperienceConnector({ future = false }: { future?: boolean }) {
@@ -285,6 +286,8 @@ export default function Home() {
           ))}
         </div>
       </div>
+      
+      <Footer/>
     </div>
   );
 }
