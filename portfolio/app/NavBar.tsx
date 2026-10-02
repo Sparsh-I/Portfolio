@@ -1,6 +1,6 @@
 export function NavBar() {
     return (
-        <div className="flex justify-around lg:justify-between px-[3%] py-[1%] sticky top-0 bg-[#141414] text-white z-50 h-20">
+        <div className="flex justify-around items-center lg:justify-between px-[3%] py-[1%] sticky top-0 bg-[#141414] text-white z-50 h-20">
             <h1 className="text-3xl hidden lg:block">
                 Sparsh Inanda
             </h1>
