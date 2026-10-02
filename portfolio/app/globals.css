@@ -27,6 +27,6 @@ body {
 }
 
 html {
-  scroll-padding-top: 40pt;
+  scroll-padding-top: 50pt;
   scroll-behavior: smooth;
 }

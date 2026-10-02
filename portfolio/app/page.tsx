@@ -94,8 +94,18 @@ const additionalProjects: Project[] = [
     <div>
       <NavBar/>
       <div id="home"></div>
-      <div className="text-center text-2xl lg:text-4xl py-15 px-5 lg:py-20 lg:px-50">
-        Hello, I'm <strong>Sparsh Inanda</strong>, a full-stack developer that also builds games.
+      <div className="h-dvh w-full text-center text-gray-500 font-semibold text-2xl lg:text-6xl flex flex-col gap-20 py-50 px-50 leading-relaxed align-center bg-[url('/background.jpg')] bg-cover bg-center">
+        <p>Hello, I'm <strong className="text-purple-300"> Sparsh Inanda</strong>, a full-stack developer that also builds games.</p>
+        <div className="flex justify-center gap-20 py-10 text-lg lg:text-xl">
+          <a className="bg-white text-[#0077B5] font-bold py-2 px-4 rounded-xl hover:bg-[#0077B5] hover:text-white hover:cursor-pointer"
+             href="https://www.linkedin.com/in/sparsh-inanda/" target="_blank" rel="noopener noreferrer">
+            Visit My LinkedIn
+          </a>
+          <a className="bg-purple-300 text-black py-2 px-4 rounded-xl hover:bg-purple-400 hover:cursor-pointer"
+             href="/Resume.pdf" target="_blank" rel="noopener noreferrer">
+            View My Resume
+          </a>
+        </div>
       </div>
 
       <div>
@@ -117,12 +127,6 @@ const additionalProjects: Project[] = [
           </div>
         </div>
 
-        <div className="text-2xl cursor-pointer underline text-center py-5">
-          <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer">
-            View My Resume
-          </a>
-        </div>
-
         <div className="flex justify-center py-10">
           <div className="relative group overflow-hiddenshadow-lg cursor-pointer bg-white p-3 flex justify-center w-180 rounded-2xl">
               <a href="https://github.com/Sparsh-I" target="_blank">
@@ -134,12 +138,6 @@ const additionalProjects: Project[] = [
                 </div>
               </a>
           </div>
-        </div>
-
-        <div className="text-2xl cursor-pointer underline text-center py-5">
-          <a href="https://www.linkedin.com/in/sparsh-inanda/" target="_blank" rel="noopener noreferrer">
-            Visit My LinkedIn
-          </a>
         </div>
       </div>
 
