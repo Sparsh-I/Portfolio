@@ -81,11 +81,11 @@ const additionalProjects: Project[] = [
     colour: "lime"
   },
   {
-    title: "View All Games",
+    title: "View All My Games",
     description: "Check out all my games on itch.io!",
     technologies: [],
     image: "https://cdn-icons-png.flaticon.com/512/3388/3388785.png",
-    imageAlt: "View All",
+    imageAlt: "View All Games",
     liveUrl: "https://sparsh-i.itch.io/",
     playLabel: "View All Games",
   },
@@ -210,7 +210,7 @@ const additionalProjects: Project[] = [
                   <img src={project.image} alt={project.title} className="mx-auto rounded-xl h-40"/>
                   <div className="absolute inset-0 bg-gray-900/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
                     <p className="text-white text-lg font-bold translate-y-5 group-hover:translate-y-0 transition-transform duration-300">
-                      Play {project.title}
+                      {project.playLabel}
                     </p>
                   </div>
                 </a>
