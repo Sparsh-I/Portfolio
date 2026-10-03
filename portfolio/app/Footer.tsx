@@ -7,7 +7,7 @@ export function Footer() {
     return (
         <div className="flex flex-row justify-between items-center px-[5%] text-gray-500 mb-10 text-xl">
             <div>
-                <p className="font-bold mb-4">Contact</p>
+                <p className="font-semibold mb-4 underline">Contact</p>
                 <div className="grid grid-cols-1 gap-3">
                     <div className="hover:text-[#0077B5] flex flex-row gap-2 items-center">
                         <a href="https://linkedin.com/in/sparsh-inanda/" target="_blank"><FaLinkedin/></a>
@@ -19,9 +19,9 @@ export function Footer() {
                     </div>
                 </div>
             </div>
-            <div>© 2026 Sparsh Inanda</div>
+            <div>© {new Date().getFullYear()} Sparsh Inanda</div>
             <div>
-                <p className="font-bold mb-4">Projects</p>
+                <p className="font-semibold mb-4 underline">Projects</p>
                 <div className="grid grid-cols-1 gap-3">
                     <div className="hover:text-[#0FBF3E] flex flex-row gap-2 items-center">
                         <a href="https://github.com/Sparsh-I" target="_blank"><SiGithub/></a>
