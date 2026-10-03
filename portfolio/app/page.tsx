@@ -255,7 +255,7 @@ export default function Home() {
           Featured Projects
         </div>
 
-         <div className="flex flex-col justify-between items-center align-center gap-10 px-5 w-100 lg:px-20 lg:w-full">
+         <div className="flex flex-col justify-between items-center align-center gap-10 px-5 lg:px-20 w-full">
           {featuredProjects.map((project) => (
             <div key={project.title} className="flex flex-col lg:flex-row-reverse items-center align-center gap-5 px-5 lg:px-5">
               <div className="relative group overflow-hiddenshadow-lg cursor-pointer bg-white flex justify-center rounded-2xl">
