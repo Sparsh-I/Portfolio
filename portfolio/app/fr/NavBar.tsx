@@ -6,14 +6,14 @@ export function NavBar() {
             </h1>
             <div className="flex flex-row gap-10 items-center">
                 <div className="flex justify-between gap-7 lg:gap-10">
-                    <a href="#home" className="text-2xl cursor-pointer">home</a>
-                    <a href="#about" className="text-2xl cursor-pointer">about</a>
-                    <a href="#projects" className="text-2xl cursor-pointer">projects</a>
+                    <a href="#home" className="text-2xl cursor-pointer">accueil</a>
+                    <a href="#about" className="text-2xl cursor-pointer">à propos</a>
+                    <a href="#projects" className="text-2xl cursor-pointer">projets</a>
                 </div>
                 <div>
-                    <a href="/fr"
+                    <a href="/"
                        className="bg-violet-300 text-black py-2 px-3 rounded-2xl hover:bg-violet-400 hover:text-white cursor-pointer">
-                        passer au français?
+                        switch to english?
                     </a>
                 </div>
             </div>
