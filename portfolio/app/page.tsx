@@ -9,10 +9,11 @@ export default function Home() {
   const skills = [
     {
       category: "Languages",
-      style: "violet",
+      bgStyle: "bg-violet-300/10",
+      borderStyle: "border-violet-300",
       items: [
         { Icon: SiIcons.SiTypescript, name: "TypeScript", colour: "#3178C6" },
-        { Icon: SiIcons.SiJavascript, name: "JavaScript", colur: "#F7DF1E" },
+        { Icon: SiIcons.SiJavascript, name: "JavaScript", colour: "#F7DF1E" },
         { Icon: SiIcons.SiPython, name: "Python", colour: "#3776AB" },
         { Icon: FaIcons.FaJava, name: "Java", colour: "#ED8B00" },
         { Icon: SiIcons.SiSharp, name: "C#", colour: "#512BD4" },
@@ -20,7 +21,8 @@ export default function Home() {
     },
     {
       category: "Web Development",
-      style: "emerald",
+      bgStyle: "bg-emerald-300/10",
+      borderStyle: "border-emerald-300",
       items: [
         { Icon: SiIcons.SiReact, name: "React", colour: "#61DAFB" },
         { Icon: SiIcons.SiNextdotjs, name: "Next.js", colour: "#e4e3e3" },
@@ -32,7 +34,8 @@ export default function Home() {
     },
     {
       category: "Data & ML",
-      style: "blue",
+      bgStyle: "bg-sky-300/10",
+      borderStyle: "border-sky-300",
       items: [
         { Icon: SiIcons.SiNumpy, name: "NumPy", colour: "#4DABCF" },
         { Icon: SiIcons.SiPandas, name: "Pandas", colour: "#FFF" },
@@ -41,7 +44,8 @@ export default function Home() {
     },
     {
       category: "Game Dev & Design",
-      style: "amber",
+      bgStyle: "bg-amber-300/10",
+      borderStyle: "border-amber-300",
       items: [
         { Icon: SiIcons.SiUnity, name: "Unity", colour: "#FFF" },
         { Icon: SiIcons.SiFigma, name: "Figma", colour: "#F24E1E" },
@@ -51,7 +55,8 @@ export default function Home() {
     },
     {
       category: "Dev Tools",
-      style: "rose",
+      bgStyle: "bg-rose-300/10",
+      borderStyle: "border-rose-300",
       items: [
         { Icon: SiIcons.SiGit, name: "Git", colour: "#F1502F" },
         { Icon: SiIcons.SiGithub, name: "GitHub", colour: "#FFF" },
@@ -96,18 +101,18 @@ export default function Home() {
       liveUrl: "https://tripsitter-psi.vercel.app/",
       playLabel: "Visit TripSitter",
       githubUrl: "https://github.com/Sparsh-I/tripsitter",
-      colour: "blue"
+      colour: "hover:text-blue-400"
     },
     {
       title: "Mt Stringmore",
-      description: "Mt Stringmore is a 2D autorunning platformer developed by Team 8 for the UBC Game Development Club.",
+      description: "Mt Stringmore is a 2D autorunning platformer developed by Team 8 for the UBC Game Development Club. It follows a marshmallow and a ball of yarn as they complete 4 unique levels, all introducing their own mechanics, to reach the summit.",
       technologies: ["Unity2D", "C#", "Adobe Illustrator", "Notion"],
       image: "/MtStringmoreScreen.png",
       imageAlt: "Mt Stringmore",
       liveUrl: "https://permafrosted.itch.io/mt-stringmore/",
       playLabel: "Play Mt Stringmore",
       githubUrl: "https://github.com/AdenC123/MtStringmore",
-      colour: "lime"
+      colour: "hover:text-lime-400"
     }
   ];
 
@@ -121,7 +126,7 @@ export default function Home() {
       liveUrl: "https://sparsh-i.itch.io/glade/",
       playLabel: "Play Glade",
       githubUrl: "https://github.com/Sparsh-I/major-jam-7-wild",
-      colour: "emerald",
+      colour: "hover:text-emerald-400",
     },
     {
       title: "Chirrup",
@@ -132,7 +137,7 @@ export default function Home() {
       liveUrl: "https://sparsh-i.itch.io/chirrup/",
       playLabel: "Play Chirrup",
       githubUrl: "https://github.com/Sparsh-I/mini-jam-184-birds",
-      colour: "lime"
+      colour: "hover:text-red-500"
     },
     {
       title: "View All My Games",
@@ -176,21 +181,21 @@ export default function Home() {
             <img src="/SparshInanda.png" alt="Sparsh Inanda" className="w-64 h-64 rounded-full object-cover"/>
           </div>
           <div className="w-full lg:w-200 py-5 px-5">
-            <p className="text-xl py-5">
+            <p className="text-xl py-5 text-center lg:text-justify">
               I'm a Computer Science and Statistics major in my final year at the University of British Columbia. 
               I have a passion for web development and game development, and most recently worked as a full-stack developer at <a className="underline" href="https://icbc.com">ICBC</a>.
             </p>
-            <p className="text-xl py-5">
+            <p className="text-xl py-5 text-center lg:text-justify">
               I enjoy building applications that are both functional and visually appealing, and I'm always looking for new challenges to improve my skills and learn new technologies.
             </p>
           </div>
         </div>
 
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-5 justify-around items-center align-center px-5 lg:px-20 py-5">
-          {skills.map(({category, style, items}) => (
+          {skills.map(({category, bgStyle, borderStyle, items}) => (
             <div key={category}>
               <div className="text-center">{category}</div>
-              <div className={`flex flex-row gap-5 py-5 bg-${style}-300/10 border-2 border-${style}-300 rounded-2xl justify-center items-center px-5`}>
+              <div className={`flex flex-row gap-5 py-5 ${bgStyle} border-2 ${borderStyle} rounded-2xl justify-center items-center px-5`}>
                 {items.map(({ Icon, name, colour }) => (
                   <div key={name} className=" rounded-sm text-3xl group relative">
                     <Icon title={name} color={colour} className="transition-transform duration-300 ease-in-out group-hover:scale-175" />
@@ -257,7 +262,7 @@ export default function Home() {
 
          <div className="flex flex-col justify-between items-center align-center gap-10 px-5 lg:px-20 w-full">
           {featuredProjects.map((project) => (
-            <div key={project.title} className="flex flex-col lg:flex-row-reverse items-center align-center gap-5 px-5 lg:px-5">
+            <div key={project.title} className="flex flex-col lg:flex-row-reverse items-center align-center gap-5 lg:gap-15 px-5 lg:px-5">
               <div className="relative group overflow-hiddenshadow-lg cursor-pointer bg-white flex justify-center rounded-2xl">
                 <a href={project.liveUrl} target="_blank">
                   <img src={project.image} alt={project.title} className="rounded-2xl"/>
@@ -268,7 +273,7 @@ export default function Home() {
                   </div>
                 </a>
             </div>
-              <div>
+              <div className="text-center lg:text-justify">
                 <div className="text-4xl font-semibold">
                   {project.title}
                 </div>
@@ -293,7 +298,7 @@ export default function Home() {
                       rel="noopener noreferrer"
                       className="text-blue-500 hover:text-blue-700"
                     >
-                      <SiIcons.SiGithub className={`inline-block text-3xl fill-current text-white hover:text-${project.colour}-400`} />
+                      <SiIcons.SiGithub className={`inline-block text-3xl fill-current text-white ${project.colour}`} />
                     </a>
                   </div>
                 </div>
@@ -323,11 +328,11 @@ export default function Home() {
                   </div>
                 </a>
             </div>
-              <div>
+              <div className="text-center">
                 <div className="text-2xl font-semibold">
                   {project.title}
                 </div>
-                <div className="w-85 py-5">
+                <div className="w-85">
                   <p className="text-xl py-5">
                     {project.description}
                   </p>
@@ -349,7 +354,7 @@ export default function Home() {
                         rel="noopener noreferrer"
                         className="text-blue-500 hover:text-blue-700"
                       >
-                        <SiIcons.SiGithub className={`inline-block text-3xl fill-current text-white hover:text-${project.colour}-400`} />
+                        <SiIcons.SiGithub className={`inline-block text-3xl fill-current text-white ${project.colour}`} />
                       </a>
                     </div>
                   )}
