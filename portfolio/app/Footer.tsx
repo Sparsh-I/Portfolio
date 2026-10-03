@@ -5,7 +5,7 @@ import { faItchIo } from '@fortawesome/free-brands-svg-icons';
 
 export function Footer() {
     return (
-        <div className="flex flex-row justify-between items-center px-[5%] text-gray-500 mb-10 text-xl">
+        <div className="flex flex-row justify-between items-center px-[5%] text-gray-500 mb-10 text-md lg:text-xl gap-10">
             <div>
                 <p className="font-semibold mb-4 underline">Contact</p>
                 <div className="grid grid-cols-1 gap-3">
@@ -19,7 +19,7 @@ export function Footer() {
                     </div>
                 </div>
             </div>
-            <div>© {new Date().getFullYear()} Sparsh Inanda</div>
+            <div className="text-center">© {new Date().getFullYear()} Sparsh Inanda</div>
             <div>
                 <p className="font-semibold mb-4 underline">Projects</p>
                 <div className="grid grid-cols-1 gap-3">

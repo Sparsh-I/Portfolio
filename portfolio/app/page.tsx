@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { NavBar } from "./NavBar";
 import * as SiIcons from "react-icons/si";
 import * as FaIcons from "react-icons/fa";
@@ -187,7 +186,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex flex-row justify-around items-center align-center px-5 lg:px-20 py-5">
+        <div className="flex flex-col lg:flex-row gap-10 lg:gap-5 justify-around items-center align-center px-5 lg:px-20 py-5">
           {skills.map(({category, style, items}) => (
             <div key={category}>
               <div className="text-center">{category}</div>
@@ -222,7 +221,7 @@ export default function Home() {
           <div className="text-3xl font-bold text-center py-10">
             Experience
           </div>
-          <div className="border-3 border-gray-600 p-4 rounded-2xl text-center flex flex-row justify-center items-center">
+          <div className="border-3 border-gray-600 p-4 rounded-2xl text-center flex flex-col lg:flex-row justify-center items-center">
             <div>
               <p>May '25 - Aug '25</p>
               <p><strong>Programming Intern</strong></p>
@@ -256,7 +255,7 @@ export default function Home() {
           Featured Projects
         </div>
 
-         <div className="flex flex-col justify-between items-center align-center gap-10 px-5 lg:px-20 w-full">
+         <div className="flex flex-col justify-between items-center align-center gap-10 px-5 w-100 lg:px-20 lg:w-full">
           {featuredProjects.map((project) => (
             <div key={project.title} className="flex flex-col lg:flex-row-reverse items-center align-center gap-5 px-5 lg:px-5">
               <div className="relative group overflow-hiddenshadow-lg cursor-pointer bg-white flex justify-center rounded-2xl">
@@ -273,7 +272,7 @@ export default function Home() {
                 <div className="text-4xl font-semibold">
                   {project.title}
                 </div>
-                <div className="w-150 py-5">
+                <div className="lg:w-150 py-1 lg:py-5">
                   <p className="text-xl py-5">
                     {project.description}
                   </p>
