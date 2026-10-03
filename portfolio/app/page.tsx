@@ -1,10 +1,66 @@
 import Image from "next/image";
-import * as Modules from "./grid/modules";
 import { NavBar } from "./NavBar";
 import * as SiIcons from "react-icons/si";
+import * as FaIcons from "react-icons/fa";
+import { VscVscode } from "react-icons/vsc";
+import { DiIllustrator, DiPhotoshop } from "react-icons/di";
 import { Footer } from "./Footer";
 
 export default function Home() {
+  const skills = [
+    {
+      category: "Languages",
+      style: "violet",
+      items: [
+        { Icon: SiIcons.SiTypescript, name: "TypeScript", colour: "#3178C6" },
+        { Icon: SiIcons.SiJavascript, name: "JavaScript", colur: "#F7DF1E" },
+        { Icon: SiIcons.SiPython, name: "Python", colour: "#3776AB" },
+        { Icon: FaIcons.FaJava, name: "Java", colour: "#ED8B00" },
+        { Icon: SiIcons.SiSharp, name: "C#", colour: "#512BD4" },
+      ],
+    },
+    {
+      category: "Web Development",
+      style: "emerald",
+      items: [
+        { Icon: SiIcons.SiReact, name: "React", colour: "#61DAFB" },
+        { Icon: SiIcons.SiNextdotjs, name: "Next.js", colour: "#e4e3e3" },
+        { Icon: SiIcons.SiVite, name: "Vite", colour: "#646CFF" },
+        { Icon: SiIcons.SiTailwindcss, name: "Tailwind", colour: "#06B6D4" },
+        { Icon: SiIcons.SiNodedotjs, name: "Node.js", colour: "#5FA04E" },
+        { Icon: SiIcons.SiPostgresql, name: "PostgreSQL", colour: "#4169E1" },
+      ],
+    },
+    {
+      category: "Data & ML",
+      style: "blue",
+      items: [
+        { Icon: SiIcons.SiNumpy, name: "NumPy", colour: "#4DABCF" },
+        { Icon: SiIcons.SiPandas, name: "Pandas", colour: "#FFF" },
+        { Icon: SiIcons.SiScikitlearn, name: "scikit-learn", colour: "#F7931E" },
+      ],
+    },
+    {
+      category: "Game Dev & Design",
+      style: "amber",
+      items: [
+        { Icon: SiIcons.SiUnity, name: "Unity", colour: "#FFF" },
+        { Icon: SiIcons.SiFigma, name: "Figma", colour: "#F24E1E" },
+        { Icon: DiIllustrator, name: "Illustrator", colour: "#FF9A00" },
+        { Icon: DiPhotoshop, name: "Photoshop", colour: "#31A8FF" },
+      ],
+    },
+    {
+      category: "Dev Tools",
+      style: "rose",
+      items: [
+        { Icon: SiIcons.SiGit, name: "Git", colour: "#F1502F" },
+        { Icon: SiIcons.SiGithub, name: "GitHub", colour: "#FFF" },
+        { Icon: VscVscode, name: "VS Code", colour: "#007ACC" },
+      ],
+    }
+  ];
+  
   function ExperienceConnector({ future = false }: { future?: boolean }) {
     return future ? (
       <div className="flex items-center p-10">
@@ -129,6 +185,24 @@ export default function Home() {
               I enjoy building applications that are both functional and visually appealing, and I'm always looking for new challenges to improve my skills and learn new technologies.
             </p>
           </div>
+        </div>
+
+        <div className="flex flex-row justify-around items-center align-center px-5 lg:px-20 py-5">
+          {skills.map(({category, style, items}) => (
+            <div key={category}>
+              <div className="text-center">{category}</div>
+              <div className={`flex flex-row gap-5 py-5 bg-${style}-300/10 border-2 border-${style}-300 rounded-2xl justify-center items-center px-5`}>
+                {items.map(({ Icon, name, colour }) => (
+                  <div key={name} className=" rounded-sm text-3xl group relative">
+                    <Icon title={name} color={colour} className="transition-transform duration-300 ease-in-out group-hover:scale-175" />
+                    <span className={`pointer-events-none absolute whitespace-nowrap left-1/2 mt-6 -translate-x-1/2 px-2 py-1 text-sm opacity-0 shadow-lg transition-opacity duration-300 group-hover:opacity-100`}>
+                      {name}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
 
         <div className="flex justify-center py-10">
