@@ -119,7 +119,7 @@ export default function Home() {
   const additionalProjects: Project[] = [
     {
       title: "Glade",
-      description: "A rule-changing, 3D puzzle game developed for Major Jam 7: Wild.",
+      description: "A rule-changing, 3D puzzle game developed for Major Jam 7: Wild with a limitation of \"unpredictable rules\".",
       technologies: ["Unity3D", "C#"],
       image: "https://img.itch.zone/aW1nLzIxNTQwMjk5LnBuZw==/315x250%23c/tZlo0c.png",
       imageAlt: "Glade",
@@ -130,7 +130,7 @@ export default function Home() {
     },
     {
       title: "Chirrup",
-      description: "A birds themed rhythm game developed for Mini Jam 184: Birds.",
+      description: "A birds themed rhythm game developed for Mini Jam 184: Birds with a limitation of \"under a minute\".",
       technologies: ["Unity2D", "C#", "LibreSprite"],
       image: "https://img.itch.zone/aW1nLzIxMTUxNjMxLnBuZw==/315x250%23c/1XSmUV.png",
       imageAlt: "Chirrup",
@@ -140,13 +140,15 @@ export default function Home() {
       colour: "hover:text-red-500"
     },
     {
-      title: "View All My Games",
-      description: "Check out all my games on itch.io!",
-      technologies: [],
-      image: "https://cdn-icons-png.flaticon.com/512/3388/3388785.png",
-      imageAlt: "View All Games",
-      liveUrl: "https://sparsh-i.itch.io/",
-      playLabel: "View All Games",
+      title: "Twenty Won",
+      description: "A calculator that computes bonus points and payouts for players in the game 21 (aka Marriage)",
+      technologies: ["Python", "Reflex"],
+      image: "https://img.magnific.com/premium-vector/royal-flush-hearts-card-game_760214-8872.jpg?semt=ais_hybrid&w=740&q=80",
+      imageAlt: "Twenty Won",
+      liveUrl: "https://score-calculator-silver-book.reflex.run/",
+      playLabel: "Visit Twenty Won",
+      githubUrl: "https://github.com/Sparsh-I/21-score-calculator",
+      colour: "hover:text-red-800"
     },
   ];
 
@@ -315,7 +317,7 @@ export default function Home() {
           Additional Projects
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 px-5 lg:px-20">  
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">  
           {additionalProjects.map((project) => (
             <div key={project.title} className="flex flex-col items-center align-center gap-5 px-5 lg:px-20">
               <div className="relative group overflow-hiddenshadow-lg cursor-pointer bg-white flex justify-center text-center rounded-2xl">
@@ -332,7 +334,7 @@ export default function Home() {
                 <div className="text-2xl font-semibold">
                   {project.title}
                 </div>
-                <div className="w-85">
+                <div className="w-85 lg:w-90">
                   <p className="text-xl py-5">
                     {project.description}
                   </p>
@@ -362,6 +364,13 @@ export default function Home() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="text-2xl font-bold text-center py-10" id="projects">
+          <a className="bg-white text-black py-2 px-10 lg:px-30 rounded-xl hover:bg-gray-400 hover:cursor-pointer"
+             href="https://sparsh-i.itch.io/" target="_blank" rel="noopener noreferrer">
+            View All My Games
+          </a>
         </div>
       </div>
       
