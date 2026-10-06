@@ -88,7 +88,8 @@ export default function Home() {
     liveUrl: string;
     playLabel: string;
     githubUrl?: string;
-    colour?: string;
+    colour: string;
+    learnMoreUrl?: string;
   };
 
   const featuredProjects: Project[] = [
@@ -101,7 +102,8 @@ export default function Home() {
       liveUrl: "https://tripsitter-psi.vercel.app/",
       playLabel: "Visit TripSitter",
       githubUrl: "https://github.com/Sparsh-I/tripsitter",
-      colour: "hover:text-blue-400"
+      colour: "hover:text-blue-400",
+      learnMoreUrl: "/projects/tripsitter",
     },
     {
       title: "Mt Stringmore",
@@ -112,7 +114,8 @@ export default function Home() {
       liveUrl: "https://permafrosted.itch.io/mt-stringmore/",
       playLabel: "Play Mt Stringmore",
       githubUrl: "https://github.com/AdenC123/MtStringmore",
-      colour: "hover:text-lime-400"
+      colour: "hover:text-lime-400",
+      learnMoreUrl: "/projects/mt-stringmore",
     }
   ];
 
@@ -293,15 +296,21 @@ export default function Home() {
                       </div>
                     ))}
                   </div>
-                  <div className="text-right p-5">
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-500 hover:text-blue-700"
-                    >
-                      <SiIcons.SiGithub className={`inline-block text-3xl fill-current text-white ${project.colour}`} />
+                  <div className="flex flex-row h-10 mt-5 justify-between items-center">
+                    <a className="bg-white text-black py-2 px-10 lg:px-30 rounded-xl hover:bg-gray-400 hover:cursor-pointer w-[85%] text-center"
+                      href={project.learnMoreUrl}>
+                      Learn More
                     </a>
+                    <div className="text-right">
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-500 hover:text-blue-700"
+                      >
+                        <SiIcons.SiGithub className={`inline-block text-3xl fill-current text-white ${project.colour}`} />
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>

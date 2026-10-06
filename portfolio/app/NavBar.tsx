@@ -5,9 +5,9 @@ export function NavBar() {
                 Sparsh Inanda
             </h1>
             <div className="flex justify-between gap-7 lg:gap-10">
-                <a href="#home" className="text-2xl cursor-pointer">home</a>
-                <a href="#about" className="text-2xl cursor-pointer">about</a>
-                <a href="#projects" className="text-2xl cursor-pointer">projects</a>
+                <a href="../#home" className="text-2xl cursor-pointer">home</a>
+                <a href="../#about" className="text-2xl cursor-pointer">about</a>
+                <a href="../#projects" className="text-2xl cursor-pointer">projects</a>
             </div>
         </div>
     )
