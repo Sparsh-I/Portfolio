@@ -97,7 +97,7 @@ export default function Home() {
       title: "TripSitter",
       description: "TripSitter is an in-development web application that allows users to log, manage, and share their travel itineraries with other members of the trip.",
       technologies: ["TypeScript", "Vite", "React", "HTML/CSS", "PostgreSQL", "Figma"],
-      image: "/TripSitterWindow.png",
+      image: "/TripSitterHome.png",
       imageAlt: "TripSitter",
       liveUrl: "https://tripsitter-psi.vercel.app/",
       playLabel: "Visit TripSitter",
