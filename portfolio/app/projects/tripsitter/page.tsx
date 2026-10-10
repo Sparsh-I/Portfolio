@@ -64,10 +64,19 @@ export default function TripSitter() {
                     </div>
                     <div className="flex flex-col lg:flex-row justify-between gap-10 items-center">
                         <div className="flex flex-col gap-5 text-justify">
-                            <p className="text-3xl font-semibold">The Progress</p>
+                            <p className="text-3xl font-semibold">The Progress [Oct 10th, 2026]</p>
                             <div className="text-lg flex flex-col gap-5">
                                 <p>
-                                    This is some example text.
+                                    All the main pages have been set up and are mostly functional. Users are able to add,
+                                    edit and delete trips, either from the quick add on the home page or from the My Trips
+                                    page. The trips details include title, description and dates, as well as a special spot
+                                    to add any reference links which for now is limited to a place to embed Airbnb links.
+                                </p>
+                                <p>
+                                    All past, current and future trips can also be viewed on the My Map page. On the home
+                                    page there is an upcoming trip widget which shows the closest upcoming future trip. 
+                                    Additionally, users can also add other users as their connections from the connections page, as well
+                                    as remove connections and ignore requests.
                                 </p>
                             </div>
                         </div>
@@ -78,13 +87,19 @@ export default function TripSitter() {
                                 <p className="text-3xl font-semibold">The Future</p>
                             <div className="text-lg flex flex-col gap-5">
                                 <p>
-                                    This is some example text.
+                                    There is still quite a bit of work that needs to be done, which is mainly to do with
+                                    the main reason for the app and that is the actual trip management and collaboration
+                                    aspects. Now that all the other pieces have been set in place, I will be able to put
+                                    all my focus into integrating these components to make sure that the user has the 
+                                    intended enjoyable experience of the application.
+                                </p>
+                                <p>
+                                    Changes include adding a way to add collaborators to trips, adding a way to add more 
+                                    than one reference to each trip, and maybe different "subtrips" or legs for each trip.
+                                    Another useful tool to have in the application would be for users to be able to upload 
+                                    and store their documents if they so choose to on their profile for ease of access.
                                 </p>
                             </div>
-                        </div>
-                        <div>
-                            {/* <BrowserFrame/>
-                            <img className="w-full h-full rounded-b-2xl align-end" src="/TripSitterSupabase.png"/> */}
                         </div>
                     </div>
                 </div>
