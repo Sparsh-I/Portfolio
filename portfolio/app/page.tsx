@@ -88,7 +88,8 @@ export default function Home() {
     liveUrl: string;
     playLabel: string;
     githubUrl?: string;
-    colour?: string;
+    colour: string;
+    learnMoreUrl?: string;
   };
 
   const featuredProjects: Project[] = [
@@ -96,12 +97,13 @@ export default function Home() {
       title: "TripSitter",
       description: "TripSitter is an in-development web application that allows users to log, manage, and share their travel itineraries with other members of the trip.",
       technologies: ["TypeScript", "Vite", "React", "HTML/CSS", "PostgreSQL", "Figma"],
-      image: "/TripSitterWindow.png",
+      image: "/TripSitterHome.png",
       imageAlt: "TripSitter",
       liveUrl: "https://tripsitter-psi.vercel.app/",
       playLabel: "Visit TripSitter",
       githubUrl: "https://github.com/Sparsh-I/tripsitter",
-      colour: "hover:text-blue-400"
+      colour: "hover:text-blue-400",
+      learnMoreUrl: "/projects/tripsitter",
     },
     {
       title: "Mt Stringmore",
@@ -112,7 +114,8 @@ export default function Home() {
       liveUrl: "https://permafrosted.itch.io/mt-stringmore/",
       playLabel: "Play Mt Stringmore",
       githubUrl: "https://github.com/AdenC123/MtStringmore",
-      colour: "hover:text-lime-400"
+      colour: "hover:text-lime-400",
+      learnMoreUrl: "/projects/mt-stringmore",
     }
   ];
 
@@ -212,7 +215,7 @@ export default function Home() {
         </div>
 
         <div className="flex justify-center py-10">
-          <div className="relative group overflow-hiddenshadow-lg cursor-pointer bg-white p-3 flex justify-center w-180 rounded-2xl">
+          <div className="relative group overflow-hidden shadow-lg cursor-pointer bg-white p-3 flex justify-center w-180 rounded-2xl">
               <a href="https://github.com/Sparsh-I" target="_blank">
                 <img src="https://ghchart.rshah.org/7955FF/Sparsh-I" alt="Sparsh-I's Github chart" />
                 <div className="absolute inset-0 bg-gray-900/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
@@ -265,7 +268,7 @@ export default function Home() {
          <div className="flex flex-col justify-between items-center align-center gap-10 px-5 lg:px-20 w-full">
           {featuredProjects.map((project) => (
             <div key={project.title} className="flex flex-col lg:flex-row-reverse items-center align-center gap-5 lg:gap-15 px-5 lg:px-5">
-              <div className="relative group overflow-hiddenshadow-lg cursor-pointer bg-white flex justify-center rounded-2xl">
+              <div className="relative group overflow-hidden shadow-lg cursor-pointer bg-white flex justify-center rounded-2xl">
                 <a href={project.liveUrl} target="_blank">
                   <img src={project.image} alt={project.title} className="rounded-2xl"/>
                   <div className="absolute inset-0 bg-gray-900/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
@@ -293,15 +296,21 @@ export default function Home() {
                       </div>
                     ))}
                   </div>
-                  <div className="text-right p-5">
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-500 hover:text-blue-700"
-                    >
-                      <SiIcons.SiGithub className={`inline-block text-3xl fill-current text-white ${project.colour}`} />
+                  <div className="flex flex-row h-10 mt-5 justify-between items-center">
+                    <a className="bg-white text-black py-2 px-10 lg:px-30 rounded-xl hover:bg-gray-400 hover:cursor-pointer w-[85%] text-center"
+                      href={project.learnMoreUrl}>
+                      Learn More
                     </a>
+                    <div className="text-right">
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-500 hover:text-blue-700"
+                      >
+                        <SiIcons.SiGithub className={`inline-block text-3xl fill-current text-white ${project.colour}`} />
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -320,7 +329,7 @@ export default function Home() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">  
           {additionalProjects.map((project) => (
             <div key={project.title} className="flex flex-col items-center align-center gap-5 px-5 lg:px-20">
-              <div className="relative group overflow-hiddenshadow-lg cursor-pointer bg-white flex justify-center text-center rounded-2xl">
+              <div className="relative group overflow-hidden shadow-lg cursor-pointer bg-white flex justify-center text-center rounded-2xl">
                 <a href={project.liveUrl} target="_blank">
                   <img src={project.image} alt={project.title} className="mx-auto rounded-xl h-40"/>
                   <div className="absolute inset-0 bg-gray-900/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
